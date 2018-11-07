@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * CODNITIVE
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE_EULA.html.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.codnitive.com/en/terms-of-service-softwares/
+ * http://www.codnitive.com/fa/terms-of-service-softwares/
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   Codnitive
+ * @package    Codnitive_AdvancedSitemap
+ * @author     Hassan Barza <support@codnitive.com>
+ * @copyright  Copyright (c) 2012 CODNITIVE Co. (http://www.codnitive.com)
+ * @license    http://www.codnitive.com/en/terms-of-service-softwares/ End User License Agreement (EULA 1.0)
+ */
+-->
+
+<config>
+	<modules>
+		<Codnitive_AdvancedSitemap>
+			<version>1.0.10</version>
+			<title>Advanced XML Sitemap</title>
+			<link><![CDATA[http://www.codnitive.com/]]></link>
+			<codPool>community</codPool>
+		</Codnitive_AdvancedSitemap>
+	</modules>
+	<global>
+		<helpers>
+			<advancedsitemap>
+				<class>Codnitive_AdvancedSitemap_Helper</class>
+			</advancedsitemap>
+		</helpers>
+		<models>
+			<advancedsitemap>
+				<class>Codnitive_AdvancedSitemap_Model</class>
+				<resourceModel>advancedsitemap_resource</resourceModel>
+			</advancedsitemap>
+			<sitemap>
+				<rewrite>
+					<sitemap>Codnitive_AdvancedSitemap_Model_Sitemap_Sitemap</sitemap>
+				</rewrite>
+			</sitemap>
+		</models>
+	</global>
+
+	<adminhtml>
+		<translate>
+			<modules>
+				<Codnitive_AdvancedSitemap>
+					<files>
+						<default>Codnitive_AdvancedSitemap.csv</default>
+					</files>
+				</Codnitive_AdvancedSitemap>
+			</modules>
+		</translate>
+	</adminhtml>
+
+	<default>
+		<codnitiveseo>
+			<advancedsitemap>
+				<active>0</active>
+				<use_sitemapindex>1</use_sitemapindex>
+				<index_file_name>sitemapindex.xml</index_file_name>
+				<sitemap_file_name>sitemap.xml</sitemap_file_name>
+				<max_file_urls>45000</max_file_urls>
+				<generation_date>0</generation_date>
+				<chkfrq>518400</chkfrq>
+				<frtrn>1</frtrn>
+			</advancedsitemap>
+		</codnitiveseo>
+	</default>
+</config>
